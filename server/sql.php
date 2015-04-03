@@ -51,7 +51,16 @@
 
 		$return_value = json_encode(-1);
 
-        $query = "SELECT * FROM " . $table_name . ";";
+		if ($table_name == 'Student') {
+			$query = "SELECT s.id, s.name, COUNT(m.dept) as majors_count
+			          FROM `Student` s
+			          LEFT JOIN `MajorsIn` m 
+			          ON s.id = m.student
+			          GROUP BY s.id";
+		} else {
+        	$query = "SELECT * FROM " . $table_name . ";";
+		}
+
         $result = mysql_query($query, $db);
        
 		if (!$result) {
@@ -66,6 +75,8 @@
 
     	return $return_value;
 	}
+
+	
 
     function add_student () {
 	    // validate data
@@ -144,7 +155,7 @@
 			} else {
 				$_SESSION['message_section'] = 'intro';
 				$_SESSION['success_message'] = 'none';
-				$_SESSION['error_message'] = 'There is no student with that name!';
+				$_SESSION['error_message'] = 'There is no student with that id!';
 			}
 			
 		}

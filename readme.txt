@@ -9,6 +9,7 @@ HTML, CSS, JavaScript, Bootstrap, PHP
 
 Backend:
 PHP, SQL
+The files are in the server folder.
 
 
 Github link:

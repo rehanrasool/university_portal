@@ -113,6 +113,9 @@
                                 <th>
                                     Name
                                 </th>
+                                <th>
+                                    Majors
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -121,10 +124,11 @@
 
                                 <td><?=$row['id']?></td>
                                 <td><?=$row['name']?></td>
+                                <td><?=$row['majors_count']?></td>
                             </tr>
                             <? } ?>
                         </tbody>
-                    </table>
+                    </table> 
                 </div>
                 <div class="col-md-12">
                     <? if ($message_section == 'intro' && $success_message != 'none') { ?>
@@ -140,7 +144,7 @@
                     </div>
                     <? } ?>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <h3> Add a Student </h3>
                     <form class="form-inline" method="post" action="server/sql.php">
                         <div class="form-group">
@@ -150,12 +154,12 @@
                         <button type="submit" class="btn btn-default">Add</button>
                     </form>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <h3> Delete a Student </h3>
                     <form class="form-inline" method="post" action="server/sql.php">
                         <div class="form-group">
                             <label for="exampleInputName2">ID</label>
-                            <input type="text" class="form-control" name="delete_student_name" placeholder="12345678" required>
+                            <input type="number" class="form-control" name="delete_student_name" placeholder="12345678" required>
                         </div>
                         <button type="submit" class="btn btn-default">Delete</button>
                     </form>
@@ -211,7 +215,7 @@
                     </div>
                     <? } ?>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <h3> Enroll a Student </h3>
                     <form class="form-inline" method="post" action="server/sql.php">
                         <div class="form-group">
@@ -244,7 +248,7 @@
                         <button type="submit" class="btn btn-default">Enroll</button>
                     </form>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-12">
                     <h3> Withdraw a Student </h3>
                     <form class="form-inline" method="post" action="server/sql.php">
                         <div class="form-group">
@@ -314,7 +318,7 @@
                     </div>
                     <? } ?>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <h3> Add Student Major </h3>
                     <form class="form-inline" method="post" action="server/sql.php">
                         <div class="form-group">
@@ -338,7 +342,7 @@
                         <button type="submit" class="btn btn-default">Add</button>
                     </form>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <h3> Drop Student Major </h3>
                     <form class="form-inline" method="post" action="server/sql.php">
                         <div class="form-group">
@@ -476,7 +480,7 @@
                     </div>
                     <? } ?>
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-12">
                     <h3> Add a Course </h3>
                     <form class="form-inline" method="post" action="server/sql.php">
                         <div class="form-group">
@@ -503,7 +507,7 @@
                         <button type="submit" class="btn btn-default">Add</button>
                     </form>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-12">
                     <h3> Delete a Course </h3>
                     <form class="form-inline" method="post" action="server/sql.php">
                         <div class="form-group">
@@ -568,7 +572,7 @@
                     </div>
                     <? } ?>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <h3> Add Room </h3>
                     <form class="form-inline" method="post" action="server/sql.php">
                         <div class="form-group">
@@ -582,7 +586,7 @@
                         <button type="submit" class="btn btn-default">Add</button>
                     </form>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-12">
                     <h3> Delete Room </h3>
                     <form class="form-inline" method="post" action="server/sql.php">
                         <div class="form-group">
